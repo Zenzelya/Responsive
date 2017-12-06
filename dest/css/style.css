@@ -6,7 +6,7 @@
 	url('../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
 	url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
 	url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 
 }
@@ -14,19 +14,18 @@
 .page-about{
 	overflow-x: hidden;
 	background-color: #f2f2f2;
+}
 
-	&_line {
+.page-about_line {
 		width: 100%;
 
 	}
 
-
-	&_line--header {
+.page-about_line--header {
 		height: 869px;
 		background: url(../img/header.png)  top center;
 		
 	}
-}
 
 .logoname{
 	position: relative;
@@ -39,37 +38,55 @@
 	color: white;
 	font-family: LeagueGothic;
 	font-size: 24px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 42px;
 	letter-spacing: -0.2px;
-	
-	&_element{
+		
+}
+
+.navigate_element{
 		width: 246px;
 		height: 259px;
 		list-style-type: none
 		
 	}
 
-	&_element--off{
+.navigate_element--off{
 		display: none;
 	}
 
-	&_element:active{
+.navigate_element:active{
 		
 	}
-		
-}
 
 .flex-column-start-center{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .flex-column-center-center{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
