@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 
 @font-face {
 	font-family: 'League_Gothic';
@@ -11,21 +15,28 @@
 
 }
 
+
 .page-about{
 	overflow-x: hidden;
 	background-color: #f2f2f2;
 }
+
 
 .page-about_line {
 		width: 100%;
 
 	}
 
+
 .page-about_line--header {
+		width: 100%;
 		height: 869px;
 		background: url(../img/header.png)  top center;
-		
+		z-index: 0;
+		background-size: cover;
 	}
+
+
 
 .logoname{
 	position: relative;
@@ -34,30 +45,80 @@
 }
 
 .navigate{
+	position: absolute;
 	margin-top: 146px;
-	color: white;
-	font-family: LeagueGothic;
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 42px;
-	letter-spacing: -0.2px;
-		
+	z-index: 1;
+
 }
 
 .navigate_element{
+		display: block;
+		text-align: center;
 		width: 246px;
+		list-style-type: none;
+
+	}
+
+.navigate_element:hover{
+		border-bottom: 2px solid #edbfff;
+		background-color: rgba(43, 35, 50, 0.8 );
+		/**/
+    
+	}
+
+.navigate_list{
+		width: 246px;
+	}
+
+.navigate_list:hover{
 		height: 259px;
-		list-style-type: none
+		background-color: rgba(63, 50, 71, 0.8 );
+		border: 1px solid #000;
+		border-radius: 10px;
 		
 	}
 
-.navigate_element--off{
+.navigate_element_hide{
 		display: none;
-	}
-
-.navigate_element:active{
 		
 	}
+
+.navigate_link{
+		color: white;
+		font-family: League_Gothic;
+		font-size: 24px;
+		line-height: 42px;
+		text-shadow: 1px 2px 2px rgba(0,0,0,.4);
+		letter-spacing: -0.2px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+.navigate_link:hover{
+
+	}
+
+.navigate_link:active{
+		border-bottom: 2px solid #edbfff;
+		background-color: rgba(43, 35, 50, 0.8 );
+	}	
+
+.navigate_list:hover > .navigate_element_hide{
+	display: block;
+}
+
+.navigate_list:hover > .navigate_element{
+	border-top: 1px solid #523e5a;
+	border-bottom: 1px solid #36283e;
+}
+
+.navigate_list:hover > .navigate_element:last-child{
+	border-bottom: 0px solid #36283e;
+}
+
+.navigate_list:hover > .navigate_element:first-child{
+	border-top: 0px solid #36283e;
+}
 
 .flex-column-start-center{
 	display: -webkit-box;
@@ -86,6 +147,22 @@
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.flex-row-start-center{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: start;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;

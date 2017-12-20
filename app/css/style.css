@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 
 @font-face {
 	font-family: 'League_Gothic';
@@ -11,6 +15,7 @@
 
 }
 
+
 .page-about{
 	overflow-x: hidden;
 	background-color: #f2f2f2;
@@ -22,11 +27,15 @@
 
 
 	&_line--header {
+		width: 100%;
 		height: 869px;
 		background: url(../img/header.png)  top center;
-		
+		z-index: 0;
+		background-size: cover;
 	}
 }
+
+
 
 .logoname{
 	position: relative;
@@ -35,29 +44,82 @@
 }
 
 .navigate{
+	position: absolute;
 	margin-top: 146px;
-	color: white;
-	font-family: LeagueGothic;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 42px;
-	letter-spacing: -0.2px;
+	z-index: 1;
+
 	
 	&_element{
+		display: block;
+		text-align: center;
 		width: 246px;
+		list-style-type: none;
+
+	}
+
+	&_element:hover{
+		border-bottom: 2px solid #edbfff;
+		background-color: rgba(43, 35, 50, 0.8 );
+		/**/
+    
+	}
+
+	&_list{
+		position: absolute
+		width: 246px;
+	}
+
+	&_list:hover{
 		height: 259px;
-		list-style-type: none
+		background-color: rgba(63, 50, 71, 0.8 );
+		border: 1px solid #000;
+		border-radius: 10px;
 		
 	}
 
-	&_element--off{
+	&_element_hide{
 		display: none;
+		
 	}
 
-	&_element:active{
 		
+	
+	&_link{
+		color: white;
+		font-family: League_Gothic;
+		font-size: 24px;
+		line-height: 42px;
+		text-shadow: 1px 2px 2px rgba(0,0,0,.4);
+		letter-spacing: -0.2px;
+		text-align: center;
+		text-decoration: none;
 	}
-		
+	&_link:hover{
+
+	}
+
+	&_link:active{
+		border-bottom: 2px solid #edbfff;
+		background-color: rgba(43, 35, 50, 0.8 );
+	}
+
+}	
+
+.navigate_list:hover > .navigate_element_hide{
+	display: block;
+}
+
+.navigate_list:hover > .navigate_element{
+	border-top: 1px solid #523e5a;
+	border-bottom: 1px solid #36283e;
+}
+
+.navigate_list:hover > .navigate_element:last-child{
+	border-bottom: 0px solid #36283e;
+}
+
+.navigate_list:hover > .navigate_element:first-child{
+	border-top: 0px solid #36283e;
 }
 
 .flex-column-start-center{
@@ -71,5 +133,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+}
+
+.flex-row-start-center{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
 	align-items: center;
 }
